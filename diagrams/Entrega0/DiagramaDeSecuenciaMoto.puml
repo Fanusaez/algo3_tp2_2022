@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+create Actor
+
+create "jugador: Jugador"
+Actor -> "jugador: Jugador": crearJugador(unaMoto)
+"jugador: Jugador" --> Actor: jugador
+
+Actor -> "jugador: Jugador": moverDerecha()
+"jugador: Jugador" -> unaMoto: Moto: moverDerecha: void
+unaMoto -> Posicion: moverDerecha(): void
+
+@enduml

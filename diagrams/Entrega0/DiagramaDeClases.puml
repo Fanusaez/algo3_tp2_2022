@@ -32,7 +32,13 @@ class 4x4{
 }
 
 class Ciudad{
+    + generarMatriz()
+    + colocarObjetos()
+}
 
+class Posicion{
+    + x
+    + y
 }
 
 interface Sorpresa{
@@ -64,10 +70,14 @@ Auto ..|> Vehiculo
 Gps --> Jugador
 Gps --> Ciudad
 Ciudad "1"--> "*" Obstaculo
+Vehiculo --> Posicion
+Note left of Posicion: Vehiculo es interfaz, posicion tendria que salir de Auto, 4x4 y Moto
 Pozo ..|> Obstaculo
 Piquete ..|> Obstaculo
 ControlPolicial ..|> Obstaculo
 Ciudad "1" --> "*" Sorpresa
+Ciudad <..> Vehiculo
+Note left of Vehiculo: Flecha bidireccional, cambiar
 Favorable ..|> Sorpresa
 Desfavorable ..|> Sorpresa
 Jugador --> Vehiculo
