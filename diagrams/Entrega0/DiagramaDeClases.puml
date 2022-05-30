@@ -1,0 +1,77 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Gps{
+    + empezarJuego()
+}
+
+class Jugador{
+    - nombre
+
+    + moverArriba()
+    + moverAbajo()
+}
+
+interface Vehiculo{
+    + moverArriba()
+    + moverAbajo()
+}
+
+class Moto{
+    + moverArriba()
+    + moverAbajo()
+}
+class Auto{
+    + moverArriba()
+    + moverAbajo()
+}
+
+class 4x4{
+    + moverArriba()
+    + moverAbajo()
+}
+
+class Ciudad{
+
+}
+
+interface Sorpresa{
+}
+
+class Favorable{}
+
+class Desfavorable{}
+
+interface Obstaculo{
+}
+
+class Pozo{}
+
+class Piquete{}
+
+class ControlPolicial{}
+
+class Posicion{
+
+}
+
+class Puntaje{
+}
+Moto ..|> Vehiculo
+Auto ..|> Vehiculo
+4x4 ..|> Vehiculo
+Gps --> Jugador
+Gps --> Ciudad
+Ciudad --> Obstaculo
+Pozo ..|> Obstaculo
+Piquete ..|> Obstaculo
+ControlPolicial ..|> Obstaculo
+Ciudad --> Sorpresa
+Favorable ..|> Sorpresa
+Desfavorable ..|> Sorpresa
+Jugador --> Vehiculo
+Jugador --> Puntaje
+
+
+
+@enduml
