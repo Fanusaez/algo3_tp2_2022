@@ -17,6 +17,10 @@ interface Vehiculo{
     + moverAbajo()
 }
 
+interface Accionable{
+    +Accionar(Vehiculo)
+}
+
 class Moto{
     + moverArriba()
     + moverAbajo()
@@ -42,21 +46,33 @@ class Posicion{
 }
 
 interface Sorpresa{
+    + sorprender(Vehiculo);
 }
 
-class Favorable{}
+class Favorable{
+    + sorprender(Vehiculo);
+}
 
-class Desfavorable{}
+class Desfavorable{
+    + sorprender(Vehiculo);
+}
 
 interface Obstaculo{
     + sumarMovimientos(Vehiculo)
 }
 
-class Pozo{}
+class Pozo{
+    + sumarMovimientos(Vehiculo)
+}
 
-class Piquete{}
+class Piquete{
+    + sumarMovimientos(Vehiculo)
+}
 
-class ControlPolicial{}
+class ControlPolicial{
+    + sumarMovimientos(Vehiculo)
+}
+
 
 class Posicion{
 
@@ -69,19 +85,25 @@ Auto ..|> Vehiculo
 4x4 ..|> Vehiculo
 Gps --> Jugador
 Gps --> Ciudad
-Ciudad "1"--> "*" Obstaculo
 Vehiculo --> Posicion
-Note left of Posicion: Vehiculo es interfaz, posicion tendria que salir de Auto, 4x4 y Moto
 Pozo ..|> Obstaculo
+
 Piquete ..|> Obstaculo
+
 ControlPolicial ..|> Obstaculo
-Ciudad "1" --> "*" Sorpresa
+
+Ciudad "1" --> "*" Accionable
 Ciudad <..> Vehiculo
-Note left of Vehiculo: Flecha bidireccional, cambiar
+Note left of Vehiculo: Vehiculo tiene que ser abstracta, ojo con la flecha
 Favorable ..|> Sorpresa
+
 Desfavorable ..|> Sorpresa
+
 Jugador --> Vehiculo
 Jugador --> Puntaje
+
+Sorpresa ..|> Accionable
+Obstaculo ..|> Accionable
 
 
 

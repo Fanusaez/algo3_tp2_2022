@@ -1,5 +1,8 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.modelo.Vehiculos.Moto;
+import edu.fiuba.algo3.modelo.Vehiculos.Vehiculo;
+
 public class Jugador{
 
     private String nombre;
@@ -9,9 +12,4 @@ public class Jugador{
          vehiculo = new Moto();
      }
 
-     public static Jugador jugadorConMoto(){
-         Jugador jugador = new Jugador();
-         jugador.vehiculo = new Moto();
-         return jugador;
-     }
 }
