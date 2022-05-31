@@ -14,13 +14,18 @@ public class Moto implements Vehiculo{
         return movimientosIncrementados;
     }
 
+    @Override
+    public void reducirMovimientosUnPorcentaje(int porcentaje) {
+        float coeficiente = (100 - (float)porcentaje) / 100;
+        movimientos = (int) (movimientos * coeficiente);
+    }
+
 
     //Metodos para probar (Hay que crear fake objects despues)
     public int cantidadDeMovimientos(){return movimientos;}
+    public void setearCantidadDeMovimientos(int cant){movimientos = cant;}
 
-    @Override
-    public void reducirMovimientosUnPorcentaje(int porcentaje) {
-        movimientos = movimientos * (porcentaje / 100);
-    }
+
+
 
 }
