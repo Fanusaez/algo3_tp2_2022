@@ -14,4 +14,7 @@ public class Moto extends Vehiculo{
         return movimientosIncrementados;
     }
 
+    public Vehiculo cambiar(){
+        return new Auto();
+    }
 }

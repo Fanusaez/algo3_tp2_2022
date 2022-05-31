@@ -10,4 +10,8 @@ public class Auto extends Vehiculo{
         movimientos += movimientosIncrementados;
         return movimientosIncrementados;
     }
+     public Vehiculo cambiar(){
+        return new TodoTerreno();
+     }
+
 }

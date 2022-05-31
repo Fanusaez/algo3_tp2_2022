@@ -9,4 +9,7 @@ public class TodoTerreno extends Auto{
         movimientos += movimientosIncrementados;
         return movimientosIncrementados;
     }
+    public Vehiculo cambiar(){
+        return new Moto();
+    }
 }

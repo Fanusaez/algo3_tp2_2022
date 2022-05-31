@@ -18,7 +18,7 @@ public abstract class Vehiculo {
         movimientos = (int) (movimientos * porcentaje);
     }
 
-
+    public abstract Vehiculo cambiar();
 
     //Metodos para probar (Hay que crear fake objects despues)
     public int cantidadDeMovimientos(){return movimientos;}
