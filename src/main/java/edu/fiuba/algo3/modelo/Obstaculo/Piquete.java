@@ -6,7 +6,7 @@ import edu.fiuba.algo3.modelo.Vehiculos.Moto;
 import edu.fiuba.algo3.modelo.Vehiculos.TodoTerreno;
 import edu.fiuba.algo3.modelo.Vehiculos.Vehiculo;
 
-public class Pozo implements Obstaculo, Accionable {
+public class Piquete implements Obstaculo, Accionable {
 
     public int aplicarPenalizacion(Vehiculo vehiculo) {
         return vehiculo.incrementarMovimientos(this);
@@ -14,23 +14,24 @@ public class Pozo implements Obstaculo, Accionable {
 
 
     public int aplicarPenalizacion(Moto moto){
-        return 3;
+        return 2;
     }
 
 
     public int aplicarPenalizacion(Auto auto) {
-        return 3;
+        // auto.darVuelta
+        return 0;
     }
 
 
     public int aplicarPenalizacion(TodoTerreno todoTerreno) {
-        // aca hay que ver como hacer para ver si lo penalizas (si tiene dos pozos cruzados) o no
+        // todoterreno.darvuelta
         return 0;
     }
 
 
     public void accionar(Vehiculo vehiculo) {
-         aplicarPenalizacion(vehiculo);
+        aplicarPenalizacion(vehiculo);
     }
 
 }
