@@ -64,6 +64,11 @@ class Desfavorable{
     + accionar(Vehiculo)
 }
 
+class CambioVehiculo{
+    + sorprender(Vehiculo)
+    + accionar(Vehiculo)
+}
+
 interface Obstaculo{
     + sumarMovimientos(Vehiculo)
 }
@@ -108,6 +113,8 @@ Ciudad <..> Vehiculo
 Favorable ..|> Sorpresa
 
 Desfavorable ..|> Sorpresa
+
+CambioVehiculo ..|> Sorpresa
 
 Jugador --> Vehiculo
 Jugador --> Puntaje
