@@ -44,4 +44,19 @@ public abstract class Vehiculo {
     public int cantidadDeMovimientos(){return movimientos;}
     public void setearCantidadDeMovimientos(int cant){movimientos = cant;}
 
+    public int obtenerPosX(){
+        return this.posicion.obtenerPosX();
+    }
+    public int obtenerPosY(){
+        return this.posicion.obtenerPosY();
+    }
+
+    public int obtenerUltimaPosX(){
+        return this.posicion.obtenerUltimaPosX();
+    }
+
+    public int obtenerUltimaPosY(){
+        return this.posicion.obtenerUltimaPosY();
+    }
+
 }
