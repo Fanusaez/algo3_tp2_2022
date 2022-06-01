@@ -4,6 +4,8 @@ import edu.fiuba.algo3.modelo.Constantes;
 import edu.fiuba.algo3.modelo.Obstaculo.Obstaculo;
 import edu.fiuba.algo3.modelo.Posicion;
 
+import java.util.Random;
+
 public abstract class Vehiculo {
 
     protected Posicion posicion;
@@ -39,6 +41,16 @@ public abstract class Vehiculo {
 
     public abstract Vehiculo cambiarVehiculo();
 
+    public static Vehiculo obtenerVehiculoAlAzar(){
+        Random azar = new Random();
+        if (azar.nextDouble() < Constantes.probabilidadDeObtenerUnaMoto){
+            return new Moto();
+        } else if (azar.nextDouble() < Constantes.probabilidadDeObtenerUnAuto){
+            return new Auto();
+        } else {
+            return new TodoTerreno();
+        }
+    }
 
     //Metodos para probar (Hay que crear fake objects despues)
     public int cantidadDeMovimientos(){return movimientos;}
