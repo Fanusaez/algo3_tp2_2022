@@ -16,7 +16,7 @@ public class TodoTerreno extends Auto{
     }
 
     public void darVuelta(){
-        posicion.setPos(posicion.getLastPosX(), posicion.getLastPosY());
+        posicion.establecerEnUltimaPos();
     }
 
     public void comerPozo(){

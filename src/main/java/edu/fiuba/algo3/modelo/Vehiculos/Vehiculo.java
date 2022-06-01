@@ -15,19 +15,19 @@ public abstract class Vehiculo {
     }
 
     public void moverArriba(){
-        this.posicion.setPosY(this.posicion.getPosY() + Constantes.cambioDeValorDePosicionPorMovimiento);
+        this.posicion.incrementarY();
     }
 
     public void moverAbajo(){
-        this.posicion.setPosY(this.posicion.getPosY() - Constantes.cambioDeValorDePosicionPorMovimiento);
+        this.posicion.decrementarY();
     }
 
     public void moverDerecha(){
-        this.posicion.setPosX(this.posicion.getPosX() + Constantes.cambioDeValorDePosicionPorMovimiento);
+        this.posicion.incrementarX();
     }
 
     public void moverIzquierda(){
-        this.posicion.setPosX(this.posicion.getPosX() - Constantes.cambioDeValorDePosicionPorMovimiento);
+        this.posicion.decrementarX();
     }
 
 

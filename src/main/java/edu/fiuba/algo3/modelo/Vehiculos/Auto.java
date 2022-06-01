@@ -13,7 +13,7 @@ public class Auto extends Vehiculo{
     }
 
     public void darVuelta(){
-        posicion.setPos(posicion.getLastPosX(), posicion.getLastPosY());
+        posicion.establecerEnUltimaPos();
     }
 
     public Vehiculo cambiarVehiculo(){
