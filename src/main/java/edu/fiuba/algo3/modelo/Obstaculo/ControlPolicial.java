@@ -1,41 +1,48 @@
 package edu.fiuba.algo3.modelo.Obstaculo;
 
+import edu.fiuba.algo3.modelo.Constantes;
 import edu.fiuba.algo3.modelo.Vehiculos.Auto;
 import edu.fiuba.algo3.modelo.Vehiculos.Moto;
 import edu.fiuba.algo3.modelo.Vehiculos.TodoTerreno;
 import edu.fiuba.algo3.modelo.Vehiculos.Vehiculo;
 
+import java.util.Random;
+
 
 public class ControlPolicial implements Obstaculo{
-    public int aplicarPenalizacion(Vehiculo vehiculo) {
-        return vehiculo.incrementarMovimientos(this);
+
+    private final Random RNG = new Random();
+
+    public int aplicarPenalizacion(Moto moto) {
+        if (RNG.nextDouble() < Constantes.probabilidadDePenalizarEnControlPolicialParaMoto) {
+            return Constantes.penalizacionDeMovimientosPorControlPolicial;
+        }
+
+        return Constantes.penalizacionDeMovimientosPorControlPolicialEsquivado;
     }
-
-
-    public int aplicarPenalizacion(Moto moto){
-        int numero = (int) (Math.random() * 11 + 1); // numero entre 1 y 10
-        if (numero <= 8) return 0; // prob de que esto pase == 0.2
-        return 3;
-    }
-
 
     public int aplicarPenalizacion(Auto auto) {
-        int numero = (int) (Math.random() * 11 + 1); // numero entre 1 y 10
-        if (numero <= 5) return 0; // prob de que esto pase == 0.5
-        return 3;
-    }
+        if (RNG.nextDouble() < Constantes.probabilidadDePenalizarEnControlPolicialParaAuto) {
+            return Constantes.penalizacionDeMovimientosPorControlPolicial;
+        }
 
+        return Constantes.penalizacionDeMovimientosPorControlPolicialEsquivado;
+    }
 
     public int aplicarPenalizacion(TodoTerreno todoTerreno) {
-        int numero = (int) (Math.random() * 11 + 1); // numero entre 1 y 10
-        if (numero <= 7) return 0; // prob de que esto pase == 0.7
-        return 3;
+        if (RNG.nextDouble() < Constantes.probabilidadDePenalizarEnControlPolicialParaTodoterreno) {
+            return Constantes.penalizacionDeMovimientosPorControlPolicial;
+        }
+
+        return Constantes.penalizacionDeMovimientosPorControlPolicialEsquivado;
     }
 
+    public int aplicarPenalizacion(Vehiculo vehiculo) {
+        return vehiculo.incrementarMovimientosSegunObstaculo(this);
+    }
 
     public void accionar(Vehiculo vehiculo) {
         aplicarPenalizacion(vehiculo);
     }
-
 
 }

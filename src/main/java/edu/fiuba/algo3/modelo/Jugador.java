@@ -8,8 +8,8 @@ public class Jugador{
     private String nombre;
     private Vehiculo vehiculo;
 
-     public Jugador(){
-         vehiculo = new Moto();
-     }
+    public Jugador(){
+         this.vehiculo = new Moto();
+    }
 
 }

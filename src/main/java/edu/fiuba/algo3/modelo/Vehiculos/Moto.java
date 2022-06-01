@@ -4,17 +4,16 @@ import edu.fiuba.algo3.modelo.Obstaculo.Obstaculo;
 
 public class Moto extends Vehiculo{
 
-    public void moverDerecha(){
-    }
-
     @Override
-    public int incrementarMovimientos(Obstaculo obstaculo){
+    public int incrementarMovimientosSegunObstaculo(Obstaculo obstaculo){
         int movimientosIncrementados = obstaculo.aplicarPenalizacion(this);
         movimientos += movimientosIncrementados;
+
         return movimientosIncrementados;
     }
 
-    public Vehiculo cambiar(){
+    public Vehiculo cambiarVehiculo(){
         return new Auto();
     }
+
 }
