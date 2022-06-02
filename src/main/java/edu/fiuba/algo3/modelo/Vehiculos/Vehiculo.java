@@ -33,11 +33,11 @@ public abstract class Vehiculo {
     }
 
 
-    public abstract int incrementarMovimientosSegunObstaculo(Obstaculo obstaculo);
-
     public void modificarMovimientosSegunFactor(double factor) {
         this.movimientos *= factor;
     }
+
+    public abstract int incrementarMovimientosSegunObstaculo(Obstaculo obstaculo);
 
     public abstract Vehiculo cambiarVehiculo();
 
@@ -51,6 +51,7 @@ public abstract class Vehiculo {
             return new TodoTerreno();
         }
     }
+
 
     //Metodos para probar (Hay que crear fake objects despues)
     public int cantidadDeMovimientos(){return movimientos;}

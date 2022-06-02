@@ -37,11 +37,6 @@ public class Posicion {
         this.posY = posY;
     }
 
-    public void setPos(int posX, int posY){
-        this.posX = posX;
-        this.posY = posY;
-    }
-
     public void incrementarX(){
         this.establecerPosX(this.obtenerPosX() + Constantes.valorDeIncrementoDePosicion);
     }

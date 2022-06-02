@@ -4,13 +4,15 @@ import java.util.Random;
 
 public class Ciudad {
 
-    private int x;
-    private int y;
-
+    private Grilla grilla;
+    private int cantSorpresas;
+    private int cantControlesPoliciales;
+    private int cantPozos;
+    private int cantPiquetes;
 
     public Ciudad(){
-        Random numAleatorio = new Random();
-        x = numAleatorio.nextInt(Constantes.tamanioMaximoPorEjeDeGrillaDeCiudad + Constantes.tamanioMinimoPorEjeDeGrillaDeCiudad) + Constantes.tamanioMinimoPorEjeDeGrillaDeCiudad;
-        y = numAleatorio.nextInt(Constantes.tamanioMaximoPorEjeDeGrillaDeCiudad + Constantes.tamanioMinimoPorEjeDeGrillaDeCiudad) + Constantes.tamanioMinimoPorEjeDeGrillaDeCiudad;
+
+
     }
+
 }
