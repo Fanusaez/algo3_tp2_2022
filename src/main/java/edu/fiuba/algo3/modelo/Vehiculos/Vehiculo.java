@@ -49,10 +49,9 @@ public abstract class Vehiculo {
     public abstract Vehiculo cambiarVehiculo();
 
     public static Vehiculo obtenerVehiculoAlAzar(Posicion posInicial){
-        Random azar = new Random();
-        if (azar.nextDouble() < Constantes.probabilidadDeObtenerUnaMoto){
+        if (RNG.nextDouble() < Constantes.probabilidadDeObtenerUnaMoto){
             return new Moto(posInicial);
-        } else if (azar.nextDouble() < Constantes.probabilidadDeObtenerUnAuto){
+        } else if (RNG.nextDouble() < Constantes.probabilidadDeObtenerUnAuto){
             return new Auto(posInicial);
         } else {
             return new TodoTerreno(posInicial);
