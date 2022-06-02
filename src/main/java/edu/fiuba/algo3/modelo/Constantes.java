@@ -14,6 +14,7 @@ public final class Constantes {
     public static final double probabilidadDePenalizarEnControlPolicialParaTodoterreno = 0.3;
     public static final double factorDeModificacionDeMovimientosPorSorpresaFavorable = 0.8;
     public static final double factorDeModificacionDeMovimientosPorSorpresaDesfavorable = 1.25;
+    public static final int valorDeIncrementoDePosicion = 1;
     public static final int cantidadDeMovimientosParaLlegarALaProximaEsquina = 3;
     public static final double probabilidadDeObtenerUnaMoto = 0.33;
     public static final double probabilidadDeObtenerUnAuto = probabilidadDeObtenerUnaMoto + 0.33;

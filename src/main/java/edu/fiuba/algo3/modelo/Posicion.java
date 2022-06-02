@@ -43,19 +43,19 @@ public class Posicion {
     }
 
     public void incrementarX(){
-        this.establecerPosX(this.obtenerPosX() + 1);
+        this.establecerPosX(this.obtenerPosX() + Constantes.valorDeIncrementoDePosicion);
     }
 
     public void decrementarX(){
-        this.establecerPosX(this.obtenerPosX() - 1);
+        this.establecerPosX(this.obtenerPosX() - Constantes.valorDeIncrementoDePosicion);
     }
 
     public void incrementarY(){
-        this.establecerPosY(this.obtenerPosY() + 1);
+        this.establecerPosY(this.obtenerPosY() + Constantes.valorDeIncrementoDePosicion);
     }
 
     public void decrementarY(){
-        this.establecerPosY(this.obtenerPosY() - 1);
+        this.establecerPosY(this.obtenerPosY() - Constantes.valorDeIncrementoDePosicion);
     }
 
     public void establecerEnUltimaPos(){
