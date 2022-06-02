@@ -14,7 +14,15 @@ public final class Constantes {
     public static final double probabilidadDePenalizarEnControlPolicialParaTodoterreno = 0.3;
     public static final double factorDeModificacionDeMovimientosPorSorpresaFavorable = 0.8;
     public static final double factorDeModificacionDeMovimientosPorSorpresaDesfavorable = 1.25;
-    public static final int cambioDeValorDePosicionPorMovimiento = 1;
+    public static final int cantidadDeMovimientosParaLlegarALaProximaEsquina = 3;
+    public static final double probabilidadDeObtenerUnaMoto = 0.33;
+    public static final double probabilidadDeObtenerUnAuto = probabilidadDeObtenerUnaMoto + 0.33;
+    public static final int tamanioMinimoPorEjeDeGrillaDeCiudad = 10;
+    public static final int tamanioMaximoPorEjeDeGrillaDeCiudad = 40;
+    public static final double cantidadDeSorpresasPorPosicionValida = 0.0415;
+    public static final double cantidadDePoliciasPorPosicionValida = 0.0415;
+    public static final double cantidadDePozosPorPosicionValida = 0.0311;
+    public static final double cantidadDePiquetesPorPosicionValida = 0.0249;
 
     private Constantes() {
     }

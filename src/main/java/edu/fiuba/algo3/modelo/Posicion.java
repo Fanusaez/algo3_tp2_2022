@@ -43,22 +43,18 @@ public class Posicion {
     }
 
     public void incrementarX(){
-        this.establecerPosX(this.posX);
         this.posX++;
     }
 
     public void decrementarX(){
-        this.establecerPosX(this.posX);
         this.posX--;
     }
 
     public void incrementarY(){
-        this.establecerPosY(this.posY);
         this.posY++;
     }
 
     public void decrementarY(){
-        this.establecerPosY(this.posY);
         this.posY--;
     }
 
