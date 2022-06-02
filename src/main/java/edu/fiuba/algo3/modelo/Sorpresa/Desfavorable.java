@@ -4,7 +4,7 @@ import edu.fiuba.algo3.modelo.Accionable;
 import edu.fiuba.algo3.modelo.Constantes;
 import edu.fiuba.algo3.modelo.Vehiculos.Vehiculo;
 
-public class Desfavorable implements Sorpresa {
+public final class Desfavorable implements Sorpresa {
 
     public void sorprender(Vehiculo vehiculo) {
         vehiculo.modificarMovimientosSegunFactor(Constantes.factorDeModificacionDeMovimientosPorSorpresaDesfavorable);

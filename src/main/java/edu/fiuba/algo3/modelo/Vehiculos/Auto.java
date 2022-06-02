@@ -3,7 +3,7 @@ package edu.fiuba.algo3.modelo.Vehiculos;
 import edu.fiuba.algo3.modelo.Obstaculo.Obstaculo;
 import edu.fiuba.algo3.modelo.Posicion;
 
-public class Auto extends Vehiculo{
+public final class Auto extends Vehiculo{
 
     public Auto(Posicion posInicial){
         super(posInicial);

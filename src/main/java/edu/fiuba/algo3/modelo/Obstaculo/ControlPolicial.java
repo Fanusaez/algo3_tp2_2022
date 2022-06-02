@@ -9,7 +9,7 @@ import edu.fiuba.algo3.modelo.Vehiculos.Vehiculo;
 import java.util.Random;
 
 
-public class ControlPolicial implements Obstaculo {
+public final class ControlPolicial implements Obstaculo {
 
     private final Random RNG = new Random();
 
