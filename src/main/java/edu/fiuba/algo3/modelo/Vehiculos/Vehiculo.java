@@ -15,6 +15,10 @@ public abstract class Vehiculo {
     protected static Random RNG = new Random();
 
 
+    public Vehiculo (Posicion pos){
+        this.posicion = pos;
+    }
+
     public Posicion obtenerPosVehiculo(){
         return this.posicion;
     }

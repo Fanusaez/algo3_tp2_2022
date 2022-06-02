@@ -10,7 +10,7 @@ public class TodoTerreno extends Vehiculo{
 
 
     public TodoTerreno(Posicion posInicial){
-        this.posicion = posInicial;
+        super(posInicial);
     }
 
     @Override
