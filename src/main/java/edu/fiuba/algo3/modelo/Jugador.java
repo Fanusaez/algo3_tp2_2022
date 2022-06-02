@@ -12,11 +12,17 @@ public class Jugador{
     private String nombre;
     private Vehiculo vehiculo;
 
-    public Jugador(String nombre){
+    public Jugador(String nombre, Posicion posInicialVehiculo){
         this.nombre = nombre;
-        this.vehiculo = Vehiculo.obtenerVehiculoAlAzar();
+        this.vehiculo = Vehiculo.obtenerVehiculoAlAzar(posInicialVehiculo);
     }
 
+    public String obtenerNombre(){
+        return this.nombre;
+    }
 
+    public Vehiculo obtenerVehiculo(){
+        return this.vehiculo;
+    }
 
 }

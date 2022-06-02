@@ -2,9 +2,9 @@ package edu.fiuba.algo3.modelo.Sorpresa;
 
 import edu.fiuba.algo3.modelo.Vehiculos.Vehiculo;
 
-public class CambioDeVehiculo implements Sorpresa{
+public class CambioDeVehiculo implements Sorpresa {
 
-    public void sorprender(Vehiculo vehiculo){
+    public void sorprender(Vehiculo vehiculo) {
         vehiculo.cambiarVehiculo();
     }
 

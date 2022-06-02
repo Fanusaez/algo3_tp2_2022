@@ -7,7 +7,7 @@ import edu.fiuba.algo3.modelo.Vehiculos.Moto;
 import edu.fiuba.algo3.modelo.Vehiculos.TodoTerreno;
 import edu.fiuba.algo3.modelo.Vehiculos.Vehiculo;
 
-public class Pozo implements Obstaculo, Accionable {
+public class Pozo implements Obstaculo {
 
     public int aplicarPenalizacion(Moto moto){
         return Constantes.penalizacionDeMovimientosPorPozoParaMotoYAuto;

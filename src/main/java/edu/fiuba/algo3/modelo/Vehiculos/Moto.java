@@ -1,8 +1,13 @@
 package edu.fiuba.algo3.modelo.Vehiculos;
 
 import edu.fiuba.algo3.modelo.Obstaculo.Obstaculo;
+import edu.fiuba.algo3.modelo.Posicion;
 
 public class Moto extends Vehiculo{
+
+    public Moto(Posicion posInicial){
+        this.posicion = posInicial;
+    }
 
     @Override
     public int incrementarMovimientosSegunObstaculo(Obstaculo obstaculo){
@@ -13,7 +18,7 @@ public class Moto extends Vehiculo{
     }
 
     public Vehiculo cambiarVehiculo(){
-        return new Auto();
+        return new Auto(this.posicion);
     }
 
 }

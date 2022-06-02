@@ -7,6 +7,7 @@ public class Posicion {
     private int ultimaPosY;
 
     public Posicion(int posX, int posY) {
+        // Crear excepcion para que ningun valor de la posicion pueda ser <= 0.
         this.posX = posX;
         this.posY = posY;
     }
@@ -56,6 +57,11 @@ public class Posicion {
     public void establecerEnUltimaPos(){
         this.establecerPosX(this.obtenerUltimaPosX());
         this.establecerPosY(this.obtenerUltimaPosY());
+    }
+
+
+    public static boolean posicionesCoincidenEnCoords(Posicion pos1, Posicion pos2){
+        return (pos1.obtenerPosX() == pos2.obtenerPosX()) && (pos1.obtenerPosY() == pos2.obtenerPosY());
     }
 
 }

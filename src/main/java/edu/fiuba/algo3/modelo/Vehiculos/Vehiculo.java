@@ -12,6 +12,13 @@ public abstract class Vehiculo {
     protected int movimientos;
 
 
+    protected static Random RNG = new Random();
+
+
+    public Posicion obtenerPosVehiculo(){
+        return this.posicion;
+    }
+
     public void posicionarVehiculo(int posicionX, int posicionY){
         this.posicion = new Posicion(posicionX, posicionY);
     }
@@ -41,14 +48,14 @@ public abstract class Vehiculo {
 
     public abstract Vehiculo cambiarVehiculo();
 
-    public static Vehiculo obtenerVehiculoAlAzar(){
+    public static Vehiculo obtenerVehiculoAlAzar(Posicion posInicial){
         Random azar = new Random();
         if (azar.nextDouble() < Constantes.probabilidadDeObtenerUnaMoto){
-            return new Moto();
+            return new Moto(posInicial);
         } else if (azar.nextDouble() < Constantes.probabilidadDeObtenerUnAuto){
-            return new Auto();
+            return new Auto(posInicial);
         } else {
-            return new TodoTerreno();
+            return new TodoTerreno(posInicial);
         }
     }
 

@@ -2,10 +2,16 @@ package edu.fiuba.algo3.modelo.Vehiculos;
 
 import edu.fiuba.algo3.modelo.Constantes;
 import edu.fiuba.algo3.modelo.Obstaculo.Obstaculo;
+import edu.fiuba.algo3.modelo.Posicion;
 
-public class TodoTerreno extends Auto{
+public class TodoTerreno extends Vehiculo{
 
     private int pozosComidos;
+
+
+    public TodoTerreno(Posicion posInicial){
+        this.posicion = posInicial;
+    }
 
     @Override
     public int incrementarMovimientosSegunObstaculo(Obstaculo obstaculo){
@@ -28,7 +34,7 @@ public class TodoTerreno extends Auto{
     }
 
     public Vehiculo cambiarVehiculo(){
-        return new Moto();
+        return new Moto(this.posicion);
     }
 
 }

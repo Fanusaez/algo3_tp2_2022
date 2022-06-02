@@ -24,6 +24,8 @@ public final class Constantes {
     public static final double cantidadDePoliciasPorPosicionValida = 0.0415;
     public static final double cantidadDePozosPorPosicionValida = 0.0311;
     public static final double cantidadDePiquetesPorPosicionValida = 0.0249;
+    public static final double porcentajeDeAccionablesEnEjeX = 0.5;
+    public static final int posIniEnXDeVehiculo = 1;
 
     private Constantes() {
     }

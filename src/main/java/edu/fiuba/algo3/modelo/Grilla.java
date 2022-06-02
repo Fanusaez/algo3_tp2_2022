@@ -4,28 +4,20 @@ import java.util.Random;
 
 public class Grilla {
 
-    private Object[][] grilla;
+    private Accionable[][] grilla;
     private int cantEsquinasEjeX;
     private int cantEsquinasEjeY;
     private int tamanioEjeX;
     private int tamanioEjeY;
 
 
-    static Random RNG = new Random();
+    private static Random RNG = new Random();
 
 
     public Grilla(){
-        this.asignarCantEsquinas();
+        this.asignarCantidadesDeEsquinas();
         this.asignarTamaniosEjes();
-        this.grilla = new Object[tamanioEjeX][tamanioEjeY];
-    }
-
-    public int obtenerCantEsquinasEjeX(){
-        return this.cantEsquinasEjeX;
-    }
-
-    public int obtenerCantEsquinasEjeY(){
-        return this.cantEsquinasEjeY;
+        this.grilla = new Accionable[this.tamanioEjeX][this.tamanioEjeY];
     }
 
     public int obtenerTamanioEjeX(){
@@ -36,17 +28,37 @@ public class Grilla {
         return this.tamanioEjeY;
     }
 
-    public int obtenerCantTotalDePosiciones(){
+    private int obtenerCantTotalDePosiciones(){
         return this.tamanioEjeX * this.tamanioEjeY;
     }
 
-    public void insertarObjetoEnPosicion(int posX, int posY, Object objeto){
-        grilla[posX][posY] = objeto;
+    private int obtenerCantTotalDeManzanas(){
+        return (this.cantEsquinasEjeX + 1) * (this.cantEsquinasEjeY + 1);
     }
 
-    private void asignarCantEsquinas(){
-        this.cantEsquinasEjeX = Grilla.conseguirCantEsquinasPorEje();
-        this.cantEsquinasEjeY = Grilla.conseguirCantEsquinasPorEje();
+    private int obtenerCantTotalPosicionesDeManzanas(){
+        return this.obtenerCantTotalDeManzanas() * 4;
+    }
+
+    private int obtenerCantTotalDeEsquinas(){
+        return this.cantEsquinasEjeX * this.cantEsquinasEjeY;
+    }
+
+    public int obtenerCantTotalDePosValidas(){
+        return this.obtenerCantTotalDePosiciones() - this.obtenerCantTotalPosicionesDeManzanas() - this.obtenerCantTotalDeEsquinas();
+    }
+
+    public Accionable obtenerAccionableEnPosicion(Posicion pos){
+        return grilla[pos.obtenerPosX() - 1][pos.obtenerPosY() - 1];
+    }
+
+    public void insertarAccionableEnPosicion(Posicion pos, Accionable objeto){
+        grilla[pos.obtenerPosX() - 1][pos.obtenerPosY() - 1] = objeto;
+    }
+
+    private void asignarCantidadesDeEsquinas(){
+        this.cantEsquinasEjeX = Grilla.conseguirUnaCantEsquinasPorEje();
+        this.cantEsquinasEjeY = Grilla.conseguirUnaCantEsquinasPorEje();
     }
 
     private void asignarTamaniosEjes(){
@@ -55,7 +67,7 @@ public class Grilla {
     }
 
 
-    private static int conseguirCantEsquinasPorEje(){
+    private static int conseguirUnaCantEsquinasPorEje(){
         return RNG.nextInt(Constantes.cantidadMaximaDeEsquinasPorEje - Constantes.cantidadMinimaDeEsquinasPorEje) + Constantes.cantidadMinimaDeEsquinasPorEje;
     }
 
