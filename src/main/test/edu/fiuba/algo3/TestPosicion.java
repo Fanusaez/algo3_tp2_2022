@@ -41,13 +41,15 @@ public class TestPosicion {
 
     @Test
     public void Test05LaPosicionEstablecidaEnXEsCorrecta(){
-
+        Posicion posicion = new Posicion(4, 7);
+        assertEquals(4,  posicion.obtenerPosX());
     }
 
 
     @Test
     public void Test06LaPosicionEstablecidaEnYEsCorrecta(){
-
+        Posicion posicion = new Posicion(4, 7);
+        assertEquals(7,  posicion.obtenerPosX());
     }
 
 }
