@@ -25,4 +25,21 @@ public class Jugador{
         return this.vehiculo;
     }
 
+    public void moverArriba(){
+        this.obtenerVehiculo().moverArriba();
+    }
+
+    public void moverAbajo(){
+        this.obtenerVehiculo().moverAbajo();
+    }
+
+    public void moverIzquierda(){
+        this.obtenerVehiculo().moverIzquierda();
+    }
+
+    public void moverDerecha(){
+        this.obtenerVehiculo().moverDerecha();
+    }
+
+
 }
