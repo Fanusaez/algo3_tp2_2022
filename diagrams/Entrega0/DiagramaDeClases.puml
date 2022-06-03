@@ -122,9 +122,5 @@ Jugador --> Puntaje
 Sorpresa ..|> Accionable
 Obstaculo ..|> Accionable
 
-note left of Ciudad: Quizas lo mejor es que ciudad tenga un vehiculo en vez de del jugador? para que el flujo de informacion sea mejor
-note left of Accionable: Ciudad tiene matriz de accionables y lo unico que hace cuando se mueve el vehivulo es accionable.accionar(vehivulo)
-
-
 
 @enduml

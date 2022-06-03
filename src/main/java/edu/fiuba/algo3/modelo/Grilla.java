@@ -1,5 +1,8 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.modelo.Vehiculos.Vehiculo;
+
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Grilla {
@@ -70,5 +73,11 @@ public class Grilla {
     private static int conseguirUnaCantEsquinasPorEje(){
         return RNG.nextInt(Constantes.cantidadMaximaDeEsquinasPorEje - Constantes.cantidadMinimaDeEsquinasPorEje) + Constantes.cantidadMinimaDeEsquinasPorEje;
     }
+
+    public void moverVehiculo(Vehiculo vehiculo) {
+        ArrayList<Integer> pos = vehiculo.obtenerPos();
+        grilla[pos.get(0)][pos.get(1)].accionar(vehiculo);
+    }
+
 
 }

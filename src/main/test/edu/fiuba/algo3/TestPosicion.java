@@ -49,7 +49,7 @@ public class TestPosicion {
     @Test
     public void Test06LaPosicionEstablecidaEnYEsCorrecta(){
         Posicion posicion = new Posicion(4, 7);
-        assertEquals(7,  posicion.obtenerPosX());
+        assertEquals(7,  posicion.obtenerPosY());
     }
 
 }

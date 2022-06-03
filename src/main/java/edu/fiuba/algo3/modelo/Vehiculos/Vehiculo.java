@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.Constantes;
 import edu.fiuba.algo3.modelo.Obstaculo.Obstaculo;
 import edu.fiuba.algo3.modelo.Posicion;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public abstract class Vehiculo {
@@ -52,6 +53,7 @@ public abstract class Vehiculo {
 
     public abstract Vehiculo cambiarVehiculo();
 
+
     public static Vehiculo obtenerVehiculoAlAzar(Posicion posInicial){
         if (RNG.nextDouble() < Constantes.probabilidadDeObtenerUnaMoto){
             return new Moto(posInicial);
@@ -62,7 +64,13 @@ public abstract class Vehiculo {
         }
     }
 
+    public ArrayList<Integer> obtenerPos(){
+        return posicion.obtenerPos();
+    }
 
+    public boolean estasEnEsquiana(){
+        return posicion.estasEnEsquina();
+    }
     //Metodos para probar (Hay que crear fake objects despues)
     public int cantidadDeMovimientos(){return movimientos;}
     public void setearCantidadDeMovimientos(int cant){movimientos = cant;}

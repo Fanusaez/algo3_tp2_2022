@@ -3,6 +3,7 @@ package edu.fiuba.algo3.modelo;
 import edu.fiuba.algo3.modelo.Obstaculo.ControlPolicial;
 import edu.fiuba.algo3.modelo.Obstaculo.Piquete;
 import edu.fiuba.algo3.modelo.Obstaculo.Pozo;
+import edu.fiuba.algo3.modelo.Vehiculos.Vehiculo;
 
 import java.util.Random;
 
@@ -15,6 +16,7 @@ public class Ciudad {
     private int cantPiquetes;
     private Posicion posIniVehiculo;
     private Posicion posMeta;
+    private Vehiculo vehiculo;
 
 
     private static Random RNG = new Random();
@@ -22,6 +24,7 @@ public class Ciudad {
 
     public Ciudad(){
         this.grilla = new Grilla();
+        this.vehiculo = Vehiculo.obtenerVehiculoAlAzar(this.conseguirPosIniValidaDeVehiculo());
     }
 
     public void insertarAccionablesSegunPosVehiculoYPosMeta(Posicion posInicialVehiculo, Posicion posMeta){
@@ -162,4 +165,35 @@ public class Ciudad {
         return pos;
     }
 
+    public void moverVehiculoArriba(){
+        for(int i = 0; i < 2; i++){
+            vehiculo.moverArriba();
+            grilla.moverVehiculo(vehiculo);
+            if (vehiculo.estasEnEsquiana()) break; // esto rompe pilares poo. No se como manejar caso de piquete
+        }
+    }
+
+    public void moverVehiculoAbajo(){
+        for(int i = 0; i < 2; i++){
+            vehiculo.moverAbajo();
+            grilla.moverVehiculo(vehiculo);
+            if (vehiculo.estasEnEsquiana()) break; // esto rompe pilares poo. No se como manejar caso de piquete
+        }
+    }
+
+    public void moverVehiculoIzquierda(){
+        for(int i = 0; i < 2; i++){
+            vehiculo.moverIzquierda();
+            grilla.moverVehiculo(vehiculo);
+            if (vehiculo.estasEnEsquiana()) break; // esto rompe pilares poo. No se como manejar caso de piquete
+        }
+    }
+
+    public void moverVehiculoDerecha(){
+        for(int i = 0; i < 2; i++){
+            vehiculo.moverDerecha();
+            grilla.moverVehiculo(vehiculo);
+            if (vehiculo.estasEnEsquiana()) break; // esto rompe pilares poo. No se como manejar caso de piquete
+        }
+    }
 }

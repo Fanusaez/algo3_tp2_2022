@@ -1,10 +1,12 @@
 package edu.fiuba.algo3.modelo;
 
+import java.util.ArrayList;
+
 public class Posicion {
     private int posX;
     private int posY;
-    private int ultimaPosX;
-    private int ultimaPosY;
+    private int ultimaPosEnEsquinaX;
+    private int ultimaPosEnEsquinaY;
 
     public Posicion(int posX, int posY) {
         // Crear excepcion para que ningun valor de la posicion pueda ser <= 0.
@@ -21,21 +23,21 @@ public class Posicion {
     }
 
     public int obtenerUltimaPosX(){
-        return this.ultimaPosX;
+        return this.ultimaPosEnEsquinaX;
     }
 
     public int obtenerUltimaPosY(){
-        return this.ultimaPosY;
+        return this.ultimaPosEnEsquinaY;
     }
 
     public void establecerPosX(int posX) {
-        this.ultimaPosX = posX;
         this.posX = posX;
+        if (this.esMultiploDe3(posX)) ultimaPosEnEsquinaX = posX;
     }
 
     public void establecerPosY(int posY) {
-        this.ultimaPosY = posY;
         this.posY = posY;
+        if (this.esMultiploDe3(posY)) ultimaPosEnEsquinaY = posY;
     }
 
     public void incrementarX(){
@@ -64,4 +66,18 @@ public class Posicion {
         return (pos1.obtenerPosX() == pos2.obtenerPosX()) && (pos1.obtenerPosY() == pos2.obtenerPosY());
     }
 
+    public ArrayList<Integer> obtenerPos(){
+        ArrayList <Integer> pos = new ArrayList<Integer>();
+        pos.add(posX);
+        pos.add(posY);
+        return pos;
+    }
+
+    public boolean estasEnEsquina(){
+       return esMultiploDe3(posX) && esMultiploDe3(posY); // ver si funciona correctamente
+    }
+
+    private boolean esMultiploDe3(Integer num){
+        return num % 3 == 0;
+    }
 }
