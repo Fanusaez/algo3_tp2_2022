@@ -25,6 +25,7 @@ public class Jugador{
         return this.vehiculo;
     }
 
+    //Verificar si viola el encapsulamiento
     public void moverArriba(){
         this.obtenerVehiculo().moverArriba();
     }
