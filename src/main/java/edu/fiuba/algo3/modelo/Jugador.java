@@ -10,6 +10,7 @@ import java.util.Random;
 public class Jugador{
 
     private String nombre;
+    private int cantMovimientos;
 
     public Jugador(String nombre, Posicion posInicialVehiculo){
         this.nombre = nombre;
