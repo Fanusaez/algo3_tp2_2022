@@ -9,8 +9,7 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 * **Integrante 1** - [Edgardo Francisco Saez](https://github.com/fanusaez)
 * **Integrante 2** - [Lautaro De Nobili](https://github.com/LtDeno)
 * **Integrante 3** - [Felipe Mühlich](https://github.com/FeliM9)
-* **Integrante 4** - [Joaquin Dopazo](https://github.com/jdopazogh)
-* **Integrante 5** - [Alejandro Rios Esteve](https://github.com/Alejandro796)
+* **Integrante 4** - [Alejandro Rios Esteve](https://github.com/Alejandro796)
 
 Corrector: **{Corrector}**
 
