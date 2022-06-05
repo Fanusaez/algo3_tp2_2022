@@ -10,12 +10,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestJugador {
 
         @Test
-        public void Test01SeCreaUnJugadorYElNombreEsElCorrecto(){
+        public void Test01SeCreaUnJugadorYElNombreEsElCorrecto() {
                 Posicion posicion = new Posicion(5, 5);
                 Jugador j1 = new Jugador("Felipe", posicion);
                 assertEquals("Felipe", j1.obtenerNombre());
         }
-
+}
 
         //No se como comparar una clase generica con una instancia de una clase.
         /*@Test
@@ -24,7 +24,7 @@ public class TestJugador {
                 Jugador j1 = new Jugador("Felipe", posicion);
                 Vehiculo moto = new Moto(posicion);
                 assertEquals(moto, j1.obtenerVehiculo());
-        }*/
+        }
 
         @Test
         public void Test03JugadorSeMueveHaciaLaDerecha(){
@@ -59,3 +59,5 @@ public class TestJugador {
         }
 
 }
+
+*/

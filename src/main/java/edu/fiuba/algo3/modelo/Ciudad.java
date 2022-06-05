@@ -165,7 +165,7 @@ public class Ciudad {
         return pos;
     }
 
-    public void moverVehiculoArriba1(){
+    public void moverVehiculoArriba(){
         for(int i = 0; i < 2; i++){
             vehiculo.moverArriba();
             grilla.moverVehiculo(vehiculo);
@@ -173,7 +173,7 @@ public class Ciudad {
         }
     }
 
-    public void moverVehiculoAbajo1(){
+    public void moverVehiculoAbajo(){
         for(int i = 0; i < 2; i++){
             vehiculo.moverAbajo();
             grilla.moverVehiculo(vehiculo);
@@ -181,7 +181,7 @@ public class Ciudad {
         }
     }
 
-    public void moverVehiculoIzquierda1(){
+    public void moverVehiculoIzquierda(){
         for(int i = 0; i < 2; i++){
             vehiculo.moverIzquierda();
             grilla.moverVehiculo(vehiculo);
@@ -189,7 +189,7 @@ public class Ciudad {
         }
     }
 
-    public void moverVehiculoDerecha1(){
+    public void moverVehiculoDerecha(){
         for(int i = 0; i < 2; i++){
             vehiculo.moverDerecha();
             grilla.moverVehiculo(vehiculo);
