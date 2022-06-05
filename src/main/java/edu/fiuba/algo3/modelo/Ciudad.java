@@ -54,7 +54,7 @@ public class Ciudad {
     }
 
     private void insertarControlesPolicialesEnGrilla(){
-        Accionable controlPolicial;
+        ControlPolicial controlPolicial;
         int cantControlesPolicialesEjeX = (int) (this.cantControlesPoliciales * Constantes.porcentajeDeAccionablesEnEjeX);
         int cantControlesPolicialesEjeY = this.cantControlesPoliciales - cantControlesPolicialesEjeX;
 
@@ -70,7 +70,7 @@ public class Ciudad {
     }
 
     private void insertarPozosEnGrilla(){
-        Accionable pozo;
+        Pozo pozo;
         int cantPozosEjeX = (int) (this.cantPozos * Constantes.porcentajeDeAccionablesEnEjeX);
         int cantPozosEjeY = this.cantPozos - cantPozosEjeX;
 
@@ -85,7 +85,7 @@ public class Ciudad {
     }
 
     private void insertarPiquetesEnGrilla(){
-        Accionable piquete;
+        Piquete piquete;
         int cantPiquetesEjeX = (int) (this.cantPiquetes * Constantes.porcentajeDeAccionablesEnEjeX);
         int cantPiquetesY = this.cantPiquetes - cantPiquetesEjeX;
 
