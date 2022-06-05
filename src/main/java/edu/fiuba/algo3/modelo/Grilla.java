@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class Grilla {
 
-    private Accionable[][] grilla;
+    protected Accionable[][] grilla;
     private int cantEsquinasEjeX;
     private int cantEsquinasEjeY;
     private int tamanioEjeX;

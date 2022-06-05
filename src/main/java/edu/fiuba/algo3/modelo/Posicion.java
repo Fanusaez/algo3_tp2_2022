@@ -14,21 +14,6 @@ public class Posicion {
         this.posY = posY;
     }
 
-    public int obtenerPosX() {
-        return posX;
-    }
-
-    public int obtenerPosY() {
-        return posY;
-    }
-
-    public int obtenerUltimaPosX(){
-        return this.ultimaPosEnEsquinaX;
-    }
-
-    public int obtenerUltimaPosY(){
-        return this.ultimaPosEnEsquinaY;
-    }
 
     public void establecerPosX(int posX) {
         this.posX = posX;
@@ -41,29 +26,29 @@ public class Posicion {
     }
 
     public void incrementarX(){
-        this.establecerPosX(this.obtenerPosX() + Constantes.valorDeIncrementoDePosicion);
+        this.establecerPosX(posX + Constantes.valorDeIncrementoDePosicion);
     }
 
     public void decrementarX(){
-        this.establecerPosX(this.obtenerPosX() - Constantes.valorDeIncrementoDePosicion);
+        this.establecerPosX(posX - Constantes.valorDeIncrementoDePosicion);
     }
 
     public void incrementarY(){
-        this.establecerPosY(this.obtenerPosY() + Constantes.valorDeIncrementoDePosicion);
+        this.establecerPosY(posY + Constantes.valorDeIncrementoDePosicion);
     }
 
     public void decrementarY(){
-        this.establecerPosY(this.obtenerPosY() - Constantes.valorDeIncrementoDePosicion);
+        this.establecerPosY(posY - Constantes.valorDeIncrementoDePosicion);
     }
 
     public void establecerEnUltimaPos(){
-        this.establecerPosX(this.obtenerUltimaPosX());
-        this.establecerPosY(this.obtenerUltimaPosY());
+        this.establecerPosX(ultimaPosEnEsquinaX);
+        this.establecerPosY(ultimaPosEnEsquinaY);
     }
 
 
     public static boolean posicionesCoincidenEnCoords(Posicion pos1, Posicion pos2){
-        return (pos1.obtenerPosX() == pos2.obtenerPosX()) && (pos1.obtenerPosY() == pos2.obtenerPosY());
+        return (pos1.posX == pos2.posX) && (pos1.posY == pos2.posY);
     }
 
     public ArrayList<Integer> obtenerPos(){
@@ -79,5 +64,12 @@ public class Posicion {
 
     private boolean esMultiploDe3(Integer num){
         return num % 3 == 0;
+    }
+
+    public int obtenerPosX() {
+        return posX;
+    }
+    public int obtenerPosY() {
+        return posY;
     }
 }

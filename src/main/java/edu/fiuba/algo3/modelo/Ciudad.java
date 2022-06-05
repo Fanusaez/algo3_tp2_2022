@@ -9,14 +9,14 @@ import java.util.Random;
 
 public class Ciudad {
 
-    private Grilla grilla;
-    private int cantSorpresas;
-    private int cantControlesPoliciales;
-    private int cantPozos;
-    private int cantPiquetes;
-    private Posicion posIniVehiculo;
-    private Posicion posMeta;
-    private Vehiculo vehiculo;
+    protected Grilla grilla;
+    protected int cantSorpresas;
+    protected int cantControlesPoliciales;
+    protected int cantPozos;
+    protected int cantPiquetes;
+    protected Posicion posIniVehiculo;
+    protected Posicion posMeta;
+    protected Vehiculo vehiculo;
 
 
     private static Random RNG = new Random();
@@ -25,10 +25,10 @@ public class Ciudad {
     public Ciudad(){
         this.grilla = new Grilla();
         this.vehiculo = Vehiculo.obtenerVehiculoAlAzar(this.conseguirPosIniValidaDeVehiculo());
+        this.posIniVehiculo = vehiculo.obtenerPosVehiculo();
     }
 
-    public void insertarAccionablesSegunPosVehiculoYPosMeta(Posicion posInicialVehiculo, Posicion posMeta){
-        this.posIniVehiculo = posInicialVehiculo;
+    public void insertarAccionablesSegunPosVehiculoYPosMeta(Posicion posMeta){
         this.posMeta = posMeta;
         this.calcularCantidadesDeAccionables();
         this.insertarAccionablesEnGrilla();
