@@ -6,7 +6,7 @@ import edu.fiuba.algo3.modelo.Vehiculos.Vehiculo;
 import edu.fiuba.algo3.modelo.Vehiculos.Moto;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-/*
+
 public class TestJugador {
 
         @Test
@@ -24,7 +24,7 @@ public class TestJugador {
                 Jugador j1 = new Jugador("Felipe", posicion);
                 Vehiculo moto = new Moto(posicion);
                 assertEquals(moto, j1.obtenerVehiculo());
-        }
+        }*/
 
         @Test
         public void Test03JugadorSeMueveHaciaLaDerecha(){
@@ -59,4 +59,3 @@ public class TestJugador {
         }
 
 }
-*/
